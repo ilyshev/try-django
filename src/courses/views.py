@@ -48,7 +48,7 @@ class CourseUpdateView(CourseObjectMixin, View):
 			context['form'] = form
 		return render(request, self.template_name, context)
 
-	def post(self, request, id=None, *args, **kwargs):
+	def post(self, request, id=eNone, *args, **kwargs):
 		#POST method
 		form = CourseModelForm(request.POST)
 		context = {}
